@@ -1,0 +1,150 @@
+/* Background and general styling */
+body {
+    background-color: black
+    ; /* Blue sky background */
+    background-size: cover;
+    background-repeat: no-repeat;
+    color: #f0f0f0; /* Light gray text for better readability */
+    font-family: 'Arial', sans-serif;
+    position: relative;
+}
+
+/* Weather container styling */
+.weather-container {
+    max-width: 800px;
+    margin: 50px auto;
+    background-color: rgba(10, 10, 10, 0.5); /* Slightly lighter dark blue background */
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0px 4px 8px rgba(1, 4, 206, 0.6);
+    color: #f0f0f0; /* Light gray text color inside the container */
+    position: relative;
+}
+
+/* Weather header styling */
+.weather-header h2 {
+    font-size: 3rem;
+    color: #f0f0f0; /* Light gray for city name */
+}
+
+/* Weather display styling */
+.weather-display {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.weather-info h1 {
+    font-size: 4rem;
+    margin-bottom: 0;
+}
+
+.weather-info p {
+    font-size: 1.2rem;
+    color: #f0f0f0; /* Light gray text for info */
+}
+
+.weather-icon img {
+    width: 100px;
+}
+
+/* Forecast container styling */
+.forecast-container {
+    margin-top: 20px;
+    background-color: rgba(0, 0, 139, 0.4); /* Even lighter dark blue for forecast background */
+    border-radius: 10px;
+    padding: 15px;
+}
+
+.forecast-item {
+    text-align: center;
+    color: #f0f0f0; /* Light gray for forecast days */
+}
+
+.forecast-item img {
+    width: 50px;
+}
+
+/* Search box styling */
+.search-container {
+    margin-top: 30px;
+    text-align: center;
+}
+
+#search-btn {
+    margin-top: 10px;
+    background-color: #f0f0f0; /* Light gray background for search button */
+    color: #b3220e; /* Dark blue text for search button */
+    border: none;
+    padding: 10px 20px;
+    font-size: 1.2rem;
+    border-radius: 5px;
+}
+
+#search-btn:hover {
+    background-color: #f5f4fa; /* Dark blue background on hover */
+    color: #050505; /* Light gray text on hover */
+}
+
+/* Lightning and rain animation */
+body::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle, rgba(255, 255, 255, 0.2), transparent); /* Subtle white light for lightning */
+    opacity: 0;
+    z-index: 1;
+    pointer-events: none;
+    animation: lightningRain 10s infinite;
+}
+
+@keyframes lightningRain {
+    0%, 20% {
+        opacity: 0; /* No effect at start */
+    }
+    10%, 15% {
+        opacity: 0.6; /* Lightning effect */
+        background: radial-gradient(circle, rgba(255, 255, 255, 0.7), transparent); /* White lightning */
+    }
+    25%, 30% {
+        opacity: 0; /* Transition to rain */
+        background: radial-gradient(circle, rgba(0, 0, 0, 0), transparent);
+    }
+    35%, 45% {
+        opacity: 0.5; /* Rain effect */
+        background: linear-gradient(0deg, rgba(0, 255, 0, 0.5) 0%, transparent 100%); /* Green rain */
+    }
+    50%, 55% {
+        opacity: 0; /* Transition to lightning */
+        background: radial-gradient(circle, rgba(255, 255, 255, 0.7), transparent); /* White lightning */
+    }
+    65%, 75% {
+        opacity: 0.6; /* Lightning effect */
+        background: radial-gradient(circle, rgba(255, 255, 255, 0.7), transparent); /* White lightning */
+    }
+    80%, 90% {
+        opacity: 0; /* End of cycle */
+        background: radial-gradient(circle, rgba(0, 0, 0, 0), transparent);
+    }
+}
+
+/* Map container styling */
+#map {
+    margin-top: 20px;
+    height: 400px;
+    z-index: 0; /* Ensure map stays behind other content */
+}
+
+/* Fade-in animations for sections */
+.weather-header, .weather-display, .forecast-container {
+    animation: fadeIn 2s ease;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather App</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div class="container weather-container">
+        <div class="weather-header text-center">
+            <h2 id="city-name">City Name</h2>
+            <p id="date-time">Day, Month Date, Year</p>
+        </div>
+        <div class="weather-display">
+            <div class="weather-icon">
+                <img src="" id="weather-icon" alt="Weather Icon">
+            </div>
+            <div class="weather-info">
+                <h1 id="temperature">--°C</h1>
+                <p id="description">Weather Condition</p>
+                <p id="humidity">Humidity: --%</p>
+                <p id="wind-speed">Wind Speed: -- km/h</p>
+            </div>
+        </div>
+
+        <!-- Search Box -->
+        <div class="search-container">
+            <input type="text" id="city-input" placeholder="Enter City" class="form-control">
+            <button id="search-btn" class="btn btn-primary">Search</button>
+        </div>
+
+        <!-- 7 Day Forecast -->
+        <div class="forecast-container">
+            <div class="row">
+                <div class="col forecast-item">
+                    <p>Wed</p>
+                    <img src="https://www.shutterstock.com/shutterstock/photos/2481306247/display_1500/stock-vector-rainbow-icon-rainbow-raindrops-on-transparent-background-storm-with-rain-and-white-cloud-isolated-2481306247.jpg" alt="Weather Icon">
+                    <p>32°C/12°C</p>
+                </div>
+                <div class="col forecast-item">
+                    <p>Thu</p>
+                    <img src="https://www.shutterstock.com/shutterstock/photos/2029666691/display_1500/stock-vector-cold-wind-fog-blow-realistic-weather-icon-autumn-or-winter-forecast-icon-with-white-smoke-flying-2029666691.jpg" alt="Weather Icon">
+                    <p>31°C/12°C</p>
+                </div>
+                <div class="col forecast-item">
+                    <p>Fri</p>
+                    <img src="https://www.shutterstock.com/shutterstock/photos/2378662305/display_1500/stock-vector--d-tornado-hurricane-vector-cyclone-storm-effect-isolated-realistic-transparent-wind-vortex-2378662305.jpg" alt="Weather Icon">
+                    <p>28°C/9°C</p>
+                </div>
+                <div class="col forecast-item">
+                    <p>Sat</p>
+                    <img src="https://www.shutterstock.com/shutterstock/photos/2381475369/display_1500/stock-vector-clock-with-weather-forecast-icons-flat-blue-and-degrees-celsius-clock-and-weather-forecast-2381475369.jpg" alt="Weather Icon">
+                    <p>35°C/15°C</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Leaflet map container -->
+    <!-- <div id="map" style="height: 400px;"></div> -->
+
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.7.1/leaflet.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
